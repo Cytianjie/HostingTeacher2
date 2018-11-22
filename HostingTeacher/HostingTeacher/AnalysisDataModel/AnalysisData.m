@@ -7,7 +7,7 @@
 //
 
 #import "AnalysisData.h"
-#import "AppDelegate.h"
+
 
 @implementation AnalysisData
 

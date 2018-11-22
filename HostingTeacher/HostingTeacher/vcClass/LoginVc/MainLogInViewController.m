@@ -7,6 +7,8 @@
 //
 
 #import "MainLogInViewController.h"
+#import "MainTabBarViewController.h"
+#import "LoginViewController.h"
 
 @interface MainLogInViewController ()
 
@@ -17,12 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.logInButton.layer.cornerRadius = 5;
-    [self.logInButton.layer setBorderColor:[UIColor blueColor].CGColor];
-    [self.logInButton.layer setBorderWidth:1];
-}
 
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([[MyLogInUserManager manager] isLogIn]) {
+        MainTabBarViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarViewController"];
+        [self presentViewController:vc animated:NO completion:nil];
+    }else{
+        LoginViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self.navigationController pushViewController:vc animated:NO];
+    }
+}
 /*
 #pragma mark - Navigation
 

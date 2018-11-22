@@ -179,6 +179,12 @@
 		B369C49121A54D86003F545D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3EE21A54D85003F545D /* UIWebView+AFNetworking.m */; };
 		B369C49221A54D86003F545D /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3EF21A54D85003F545D /* AFAutoPurgingImageCache.m */; };
 		B369C49321A54D86003F545D /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3F121A54D85003F545D /* AFImageDownloader.m */; };
+		B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */; };
+		B3C9C2B021A64EBB00FEF552 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AF21A64EBB00FEF552 /* RegisteredViewController.m */; };
+		B3C9C2B321A65C9400FEF552 /* MyLogInUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2B221A65C9400FEF552 /* MyLogInUserManager.m */; };
+		B3C9C2B921A6A0E300FEF552 /* HomeManagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2B821A6A0E300FEF552 /* HomeManagerCollectionViewCell.m */; };
+		B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2BB21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m */; };
+		B3C9C2C021A6B3EC00FEF552 /* JHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */; };
 		B3E9D5D821A543C100B958AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5D721A543C100B958AA /* AppDelegate.m */; };
 		B3E9D5DE21A543C100B958AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E9D5DC21A543C100B958AA /* Main.storyboard */; };
 		B3E9D5E121A543C100B958AA /* HostingTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5DF21A543C100B958AA /* HostingTeacher.xcdatamodeld */; };
@@ -571,6 +577,18 @@
 		B36D55D821A544CF00477ABC /* CoreDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataClasses.h; sourceTree = "<group>"; };
 		B36D55D921A544CF00477ABC /* DataConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataConfiguration.h; sourceTree = "<group>"; };
 		B36D55DA21A544CF00477ABC /* NetUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUrl.h; sourceTree = "<group>"; };
+		B3C9C2AB21A64E4500FEF552 /* RootTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
+		B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		B3C9C2AE21A64EBB00FEF552 /* RegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		B3C9C2AF21A64EBB00FEF552 /* RegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		B3C9C2B121A65C9400FEF552 /* MyLogInUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLogInUserManager.h; sourceTree = "<group>"; };
+		B3C9C2B221A65C9400FEF552 /* MyLogInUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLogInUserManager.m; sourceTree = "<group>"; };
+		B3C9C2B721A6A0E200FEF552 /* HomeManagerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeManagerCollectionViewCell.h; sourceTree = "<group>"; };
+		B3C9C2B821A6A0E300FEF552 /* HomeManagerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeManagerCollectionViewCell.m; sourceTree = "<group>"; };
+		B3C9C2BA21A6A13C00FEF552 /* HomeManagerCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeManagerCollectionReusableView.h; sourceTree = "<group>"; };
+		B3C9C2BB21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeManagerCollectionReusableView.m; sourceTree = "<group>"; };
+		B3C9C2BE21A6B3EB00FEF552 /* JHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHScrollView.h; sourceTree = "<group>"; };
+		B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHScrollView.m; sourceTree = "<group>"; };
 		B3E9D5D321A543C100B958AA /* HostingTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostingTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9D5D621A543C100B958AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E9D5D721A543C100B958AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1250,12 +1268,12 @@
 		B350A96521A5585200696511 /* NetWorkingManagement */ = {
 			isa = PBXGroup;
 			children = (
-				B350A96621A5585200696511 /* LoadDataSuggest.m */,
+				B350A96A21A5585200696511 /* TJLoading.h */,
 				B350A96721A5585200696511 /* TJLoading.m */,
 				B350A96821A5585200696511 /* NetworkRequestManager.h */,
-				B350A96921A5585200696511 /* LoadDataSuggest.h */,
-				B350A96A21A5585200696511 /* TJLoading.h */,
 				B350A96B21A5585200696511 /* NetworkRequestManager.m */,
+				B350A96921A5585200696511 /* LoadDataSuggest.h */,
+				B350A96621A5585200696511 /* LoadDataSuggest.m */,
 			);
 			path = NetWorkingManagement;
 			sourceTree = "<group>";
@@ -1397,6 +1415,8 @@
 				B350A99A21A5588800696511 /* ChatPhotoBrowserView.h */,
 				B350A99B21A5588800696511 /* ChatPhoneCollectionViewCell.m */,
 				B350A99C21A5588800696511 /* ChatPhotoBrowserView.m */,
+				B3C9C2BE21A6B3EB00FEF552 /* JHScrollView.h */,
+				B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */,
 			);
 			path = ChatPhotoBrowserController;
 			sourceTree = "<group>";
@@ -1406,6 +1426,8 @@
 			children = (
 				B350A99621A5587D00696511 /* MyAlerView.h */,
 				B350A99521A5587D00696511 /* MyAlerView.m */,
+				B3C9C2B121A65C9400FEF552 /* MyLogInUserManager.h */,
+				B3C9C2B221A65C9400FEF552 /* MyLogInUserManager.m */,
 				B350A99821A5588800696511 /* ChatPhotoBrowserController */,
 			);
 			path = CustomView;
@@ -1414,6 +1436,7 @@
 		B369C04E21A54723003F545D /* vcClass */ = {
 			isa = PBXGroup;
 			children = (
+				B3C9C2BD21A6AE3C00FEF552 /* RootVc */,
 				B369C04F21A54723003F545D /* TabBarVc */,
 				B369C05E21A54723003F545D /* LoginVc */,
 				B369C06821A54723003F545D /* PublicVc */,
@@ -1426,10 +1449,6 @@
 			children = (
 				B369C05121A54723003F545D /* MainTabBarViewController.h */,
 				B369C05721A54723003F545D /* MainTabBarViewController.m */,
-				B369C05B21A54723003F545D /* RootViewController.h */,
-				B369C05221A54723003F545D /* RootViewController.m */,
-				B369C05A21A54723003F545D /* RootNavigationController.h */,
-				B369C05321A54723003F545D /* RootNavigationController.m */,
 				B350A9AE21A55F9D00696511 /* HomeManagementViewController.h */,
 				B350A9AF21A55F9D00696511 /* HomeManagementViewController.m */,
 				B350A9A921A55F4400696511 /* MessageViewController.h */,
@@ -1445,10 +1464,12 @@
 		B369C05E21A54723003F545D /* LoginVc */ = {
 			isa = PBXGroup;
 			children = (
-				B369C06221A54723003F545D /* LoginViewController.h */,
-				B369C05F21A54723003F545D /* LoginViewController.m */,
 				B369C06121A54723003F545D /* MainLogInViewController.h */,
 				B369C06021A54723003F545D /* MainLogInViewController.m */,
+				B369C06221A54723003F545D /* LoginViewController.h */,
+				B369C05F21A54723003F545D /* LoginViewController.m */,
+				B3C9C2AE21A64EBB00FEF552 /* RegisteredViewController.h */,
+				B3C9C2AF21A64EBB00FEF552 /* RegisteredViewController.m */,
 			);
 			path = LoginVc;
 			sourceTree = "<group>";
@@ -1480,6 +1501,10 @@
 		B369C08C21A54745003F545D /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
+				B3C9C2B721A6A0E200FEF552 /* HomeManagerCollectionViewCell.h */,
+				B3C9C2B821A6A0E300FEF552 /* HomeManagerCollectionViewCell.m */,
+				B3C9C2BA21A6A13C00FEF552 /* HomeManagerCollectionReusableView.h */,
+				B3C9C2BB21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m */,
 			);
 			path = TabBarView;
 			sourceTree = "<group>";
@@ -1572,6 +1597,19 @@
 				B369C3F121A54D85003F545D /* AFImageDownloader.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		B3C9C2BD21A6AE3C00FEF552 /* RootVc */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9C2AB21A64E4500FEF552 /* RootTableViewController.h */,
+				B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */,
+				B369C05B21A54723003F545D /* RootViewController.h */,
+				B369C05221A54723003F545D /* RootViewController.m */,
+				B369C05A21A54723003F545D /* RootNavigationController.h */,
+				B369C05321A54723003F545D /* RootNavigationController.m */,
+			);
+			path = RootVc;
 			sourceTree = "<group>";
 		};
 		B3E9D5CA21A543C100B958AA = {
@@ -1780,10 +1818,12 @@
 				B3E9D5D821A543C100B958AA /* AppDelegate.m in Sources */,
 				B350A94C21A554ED00696511 /* EaseImageView.m in Sources */,
 				B350A94221A554ED00696511 /* EaseRefreshTableViewController.m in Sources */,
+				B3C9C2B321A65C9400FEF552 /* MyLogInUserManager.m in Sources */,
 				B350A93721A554ED00696511 /* SDWebImageDownloaderOperation.m in Sources */,
 				B369C48E21A54D86003F545D /* UIImageView+AFNetworking.m in Sources */,
 				B350A92321A554ED00696511 /* PSTCollectionViewData.m in Sources */,
 				B350A97221A5585200696511 /* NetworkRequestManager.m in Sources */,
+				B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */,
 				B350A94A21A554ED00696511 /* EaseBaseMessageCell.m in Sources */,
 				B369C06C21A54723003F545D /* RootViewController.m in Sources */,
 				B350A92921A554ED00696511 /* PSTGridLayoutRow.m in Sources */,
@@ -1795,6 +1835,7 @@
 				B350A8E921A554ED00696511 /* UIViewController+DismissKeyboard.m in Sources */,
 				B350A95D21A554ED00696511 /* EaseUI.m in Sources */,
 				B350A90D21A554ED00696511 /* EMVoiceConverter.mm in Sources */,
+				B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */,
 				B350A8F121A554ED00696511 /* EaseEmojiEmoticons.m in Sources */,
 				B350A92A21A554ED00696511 /* PSTCollectionViewLayout.m in Sources */,
 				B350A91D21A554ED00696511 /* MWGridCell.m in Sources */,
@@ -1819,6 +1860,7 @@
 				B350A95321A554ED00696511 /* EaseBubbleView+Text.m in Sources */,
 				B369C49221A54D86003F545D /* AFAutoPurgingImageCache.m in Sources */,
 				B350A90E21A554ED00696511 /* EMCDDeviceManager+Remind.m in Sources */,
+				B3C9C2B021A64EBB00FEF552 /* RegisteredViewController.m in Sources */,
 				B350A8EB21A554ED00696511 /* FixFopen.c in Sources */,
 				B350A91E21A554ED00696511 /* DACircularProgressView.m in Sources */,
 				B350A93421A554ED00696511 /* SDWebImageCompat.m in Sources */,
@@ -1879,11 +1921,13 @@
 				B350A91621A554ED00696511 /* MWCaptionView.m in Sources */,
 				B369C48F21A54D86003F545D /* UIButton+AFNetworking.m in Sources */,
 				B350A8F621A554ED00696511 /* UIScrollView+MJRefresh.m in Sources */,
+				B3C9C2B921A6A0E300FEF552 /* HomeManagerCollectionViewCell.m in Sources */,
 				B350A8FC21A554ED00696511 /* MJRefreshBackStateFooter.m in Sources */,
 				B350A92621A554ED00696511 /* PSTGridLayoutSection.m in Sources */,
 				B350A95821A554ED00696511 /* EaseBubbleView+Voice.m in Sources */,
 				B350A92821A554ED00696511 /* PSTCollectionView.m in Sources */,
 				B350A9B021A55F9D00696511 /* HomeManagementViewController.m in Sources */,
+				B3C9C2C021A6B3EC00FEF552 /* JHScrollView.m in Sources */,
 				B350A92521A554ED00696511 /* PSTCollectionViewUpdateItem.m in Sources */,
 				B350A93321A554ED00696511 /* UIImage+MultiFormat.m in Sources */,
 				B350A8F521A554ED00696511 /* EaseUserModel.m in Sources */,

@@ -22,6 +22,7 @@
 #import "TJToolsClass.h"
 #import "FAMJMJRefreshManagement.h"
 #import "CoreDataManagement.h"
+#import "MyLogInUserManager.h"
 
 
 // 判断iPhone
@@ -45,11 +46,6 @@
 #define Height_TabBar ((IS_IPHONE_X == YES || IS_IPHONE_Xr == YES || IS_IPHONE_Xs == YES || IS_IPHONE_Xs_Max == YES) ? 83.0 : 49.0)
 //底部安全区
 #define Height_BottomSafetyZone ((IS_IPHONE_X == YES || IS_IPHONE_Xr == YES || IS_IPHONE_Xs == YES || IS_IPHONE_Xs_Max == YES) ? 34.0 : 0.0)
-
-
-
-
-
 
 #define kScreen_Width [UIScreen mainScreen].bounds.size.width
 #define kScreen_Height [UIScreen mainScreen].bounds.size.height

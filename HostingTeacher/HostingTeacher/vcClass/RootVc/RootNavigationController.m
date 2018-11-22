@@ -8,6 +8,7 @@
 
 #import "RootNavigationController.h"
 #import "MainLogInViewController.h"
+#import "LoginViewController.h"
 
 @interface RootNavigationController ()<UINavigationControllerDelegate>
 
@@ -24,7 +25,7 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     // 判断要显示的控制器是否是自己
-    BOOL isShowHomePage = [viewController isKindOfClass:[MainLogInViewController class]];
+    BOOL isShowHomePage = [viewController isKindOfClass:[MainLogInViewController class]] || [viewController isKindOfClass:[LoginViewController class]];
     [self setNavigationBarHidden:isShowHomePage animated:animated];
 
 }

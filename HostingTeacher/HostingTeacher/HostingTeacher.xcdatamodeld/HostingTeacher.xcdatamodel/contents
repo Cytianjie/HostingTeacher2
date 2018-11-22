@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="DBUserData" representedClassName="DBUserData" syncable="YES" codeGenerationType="class">
+        <attribute name="htAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htComeFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htCreatorTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htFinish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htGartenId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htLastLoginTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htMobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htNickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htRealName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htRoleID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htSortCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htUid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htUser_IP" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htUserType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logintoken" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DBUserData" positionX="-63" positionY="-18" width="128" height="315"/>
+    </elements>
 </model>

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeManagementViewController : RootViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 

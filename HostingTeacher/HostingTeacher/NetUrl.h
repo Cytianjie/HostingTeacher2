@@ -9,8 +9,12 @@
 #ifndef NetUrl_h
 #define NetUrl_h
 
-#define HTTPHEADER_URL @"http://140.143.138.195"
+#define HTTPHEADER_URL @"http://140.143.138.195:8080"
 
+//注册
+#define URL_Registration @"/api/MobileApi/Registration"
+//登陆
+#define URL_MobileLogon @"/api/MobileApi/MobileLogon"
 
 
 #endif /* NetUrl_h */

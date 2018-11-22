@@ -30,7 +30,7 @@
         sessionManager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
         sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json",@"text/html",@"text/json",@"text/plain",@"text/javascript",@"text/xml",@"image/*"]];
     });
-    return sessionManager;;
+    return sessionManager;
 }
 -(void)POST_URL_HttpHeader:(NSString *)header url:(NSString *)url params:(NSDictionary *)params withLoading:(BOOL)isLoading isFailureAlter:(BOOL)isAlter successBlock:(ResponseSuccess)success failureBlock:(ResponseFailure)failure{
     TJLoading * laoding;
@@ -43,10 +43,11 @@
     [session POST:[NSString stringWithFormat:@"%@%@",header,url] parameters:params headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"----success--->%@",responseObject);
         BOOL isOk = NO;
         if (responseObject) {
             NSString * result = responseObject[@"result"];
-            if ([result isEqualToString:@"ok"]) {
+            if ([result isEqualToString:@"success"]) {
                 isOk = YES;
             }
         }
@@ -65,10 +66,11 @@
         
         [laoding loadingDisappear];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"----->>error--->%@",error);
         failure(task,@"",error);
         [laoding loadingDisappear];
         if (isAlter == YES) {
-            [LoadDataSuggest showFailWith:NSLocalizedString(@"netWorkError", nil)];
+            [LoadDataSuggest showFailWith:@"网络错误"];
         }
     }];
 }
@@ -82,10 +84,11 @@
     [session GET:[NSString stringWithFormat:@"%@%@",header,url] parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"----success--->%@",responseObject);
         BOOL isOk = NO;
         if (responseObject) {
             NSString * result = responseObject[@"result"];
-            if ([result isEqualToString:@"ok"]) {
+            if ([result isEqualToString:@"success"]) {
                 isOk = YES;
             }
         }
@@ -104,10 +107,11 @@
         
         [laoding loadingDisappear];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"----->>error--->%@",error);
         failure(task,@"",error);
         [laoding loadingDisappear];
         if (isAlter == YES) {
-            [LoadDataSuggest showFailWith:NSLocalizedString(@"netWorkError", nil)];
+            [LoadDataSuggest showFailWith:@"网络错误"];
         }
     }];
 }

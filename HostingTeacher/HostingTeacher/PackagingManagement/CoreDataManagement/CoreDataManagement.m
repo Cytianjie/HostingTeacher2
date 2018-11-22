@@ -18,23 +18,24 @@
 +(void)removeObject:(NSManagedObject *)object{
     [[AppDelegate getAppDelegate].persistentContainer.viewContext deleteObject:object];
 }
-+(NSManagedObject *)updateDataObjectForEntityForName:(NSString *)name key:(NSString *)key value:(NSString *)value{
++(NSManagedObject *)updateDataObjectForEntityForName:(NSString *)name predicate:(NSPredicate *)predicate{
     
     //创建查询请求
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:name];
-    NSPredicate *pre = [NSPredicate predicateWithFormat:@"%@ = %@", key,value];
-    request.predicate = pre;
+    // 从第几页开始显示
+    request.fetchOffset = 0;
+    // 每页显示多少条数据
+    request.fetchLimit = NSIntegerMax;
+    request.predicate = predicate;
     //发送请求
     NSArray *resArray = [[AppDelegate getAppDelegate].persistentContainer.viewContext executeFetchRequest:request error:nil];
-    
     if (resArray.count > 0) {
         return resArray.firstObject;
     }
     return nil;
-   
 }
-//读取查询
-- (NSArray *)readDataForEntityForName:(NSString *)name{
+//读取查询表所有
++ (NSArray *)readDataForEntityForName:(NSString *)name{
     //创建查询请求
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:name];
     // 从第几页开始显示
@@ -45,5 +46,9 @@
     NSArray *resArray = [[AppDelegate getAppDelegate].persistentContainer.viewContext executeFetchRequest:request error:nil];
     return resArray;
     
+}
+
++ (void)saveContext{
+    [[AppDelegate getAppDelegate] saveContext];
 }
 @end

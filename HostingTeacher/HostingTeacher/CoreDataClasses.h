@@ -10,7 +10,7 @@
 #define CoreDataClasses_h
 
 
-
+#import "DBUserData+CoreDataClass.h"
 
 
 #endif /* CoreDataClasses_h */

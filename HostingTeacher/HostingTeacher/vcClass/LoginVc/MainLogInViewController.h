@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainLogInViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *logInButton;
 
 @end
 

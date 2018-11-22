@@ -12,10 +12,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreDataManagement : NSObject
+//插入数据
 +(NSManagedObject *)insertNewObjectForEntityForName:(NSString *)name;
++(void)removeObject:(NSManagedObject *)object;
 //读取查询
-+(NSManagedObject *)updateDataObjectForEntityForName:(NSString *)name key:(NSString *)key value:(NSString *)value;
-- (NSArray *)readDataForEntityForName:(NSString *)name;
++(NSManagedObject *)updateDataObjectForEntityForName:(NSString *)name predicate:(NSPredicate *)predicate;
++ (NSArray *)readDataForEntityForName:(NSString *)name;
+
+//保存数据
++ (void)saveContext;
 @end
 
 NS_ASSUME_NONNULL_END
