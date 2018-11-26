@@ -26,7 +26,7 @@
 // 图片 url string 数组
 @property (nonatomic, weak) NSMutableArray *imageArr;
 //代理
-@property (nonatomic, assign) id<lunBoScrollViewDelegate> delegate;
+@property (nonatomic, weak) id<lunBoScrollViewDelegate> delegate;
 
 
 

@@ -26,11 +26,11 @@ typedef void (^ResponseFailure)(NSURLSessionTask * task,NSString * errorMessage,
  @param success 成功block
  @param failure 失败block
  */
--(void)POST_URL_HttpHeader:(NSString *)header url:(NSString *)url params:(NSDictionary *)params withLoading:(BOOL)isLoading isFailureAlter:(BOOL)isAlter successBlock:(ResponseSuccess)success failureBlock:(ResponseFailure)failure;
+-(void)POST_URL_HttpHeader:(NSString *)header url:(NSString *)url params:(NSMutableDictionary *)params withLoading:(BOOL)isLoading isFailureAlter:(BOOL)isAlter successBlock:(ResponseSuccess)success failureBlock:(ResponseFailure)failure;
 
 -(void)GET_URL_HttpHeader:(NSString *)header url:(NSString *)url withLoading:(BOOL)isLoading isFailureAlter:(BOOL)isAlter successBlock:(ResponseSuccess)success failureBlock:(ResponseFailure)failure;
 
-
+-(void)POST_IMAGEURL_HttpHeader:(NSString *)header url:(NSString *)url params:(NSMutableDictionary *)params  imageArry:(nullable NSArray *)imageArray withLoading:(BOOL)isLoading isFailureAlter:(BOOL)isAlter success:(_Nullable ResponseSuccess)success failure:(_Nullable ResponseFailure)failure;
 
 @end
 

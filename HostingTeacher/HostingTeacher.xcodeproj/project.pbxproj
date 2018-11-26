@@ -185,6 +185,8 @@
 		B3C9C2B921A6A0E300FEF552 /* HomeManagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2B821A6A0E300FEF552 /* HomeManagerCollectionViewCell.m */; };
 		B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2BB21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m */; };
 		B3C9C2C021A6B3EC00FEF552 /* JHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */; };
+		B3C9C2C421A6C13100FEF552 /* TeachersManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */; };
+		B3C9C2C921A6C32600FEF552 /* TeachersManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */; };
 		B3E9D5D821A543C100B958AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5D721A543C100B958AA /* AppDelegate.m */; };
 		B3E9D5DE21A543C100B958AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E9D5DC21A543C100B958AA /* Main.storyboard */; };
 		B3E9D5E121A543C100B958AA /* HostingTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5DF21A543C100B958AA /* HostingTeacher.xcdatamodeld */; };
@@ -193,6 +195,12 @@
 		B3E9D5E921A543C300B958AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5E821A543C300B958AA /* main.m */; };
 		B3E9D5F321A543C300B958AA /* HostingTeacherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5F221A543C300B958AA /* HostingTeacherTests.m */; };
 		B3E9D5FE21A543C300B958AA /* HostingTeacherUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5FD21A543C300B958AA /* HostingTeacherUITests.m */; };
+		B3E9FACD21ABD97A0076FF90 /* ClassManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9FACC21ABD97A0076FF90 /* ClassManagementViewController.m */; };
+		B3E9FAD021ABDD8E0076FF90 /* AddClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9FACF21ABDD8E0076FF90 /* AddClassTableViewController.m */; };
+		B3E9FAD321ABE1F90076FF90 /* SelectTeachrsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9FAD221ABE1F90076FF90 /* SelectTeachrsViewController.m */; };
+		B3E9FAD721ABFEB20076FF90 /* StudentsManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9FAD621ABFEB20076FF90 /* StudentsManagementViewController.m */; };
+		B3EC1FE321A7983D007D176E /* AddTeachersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC1FE221A7983D007D176E /* AddTeachersTableViewController.m */; };
+		B3EC1FE621A79CC9007D176E /* DatesAndRollersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC1FE521A79CC9007D176E /* DatesAndRollersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -589,6 +597,10 @@
 		B3C9C2BB21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeManagerCollectionReusableView.m; sourceTree = "<group>"; };
 		B3C9C2BE21A6B3EB00FEF552 /* JHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHScrollView.h; sourceTree = "<group>"; };
 		B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHScrollView.m; sourceTree = "<group>"; };
+		B3C9C2C221A6C13100FEF552 /* TeachersManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeachersManagementViewController.h; sourceTree = "<group>"; };
+		B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeachersManagementViewController.m; sourceTree = "<group>"; };
+		B3C9C2C721A6C32600FEF552 /* TeachersManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeachersManagementTableViewCell.h; sourceTree = "<group>"; };
+		B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeachersManagementTableViewCell.m; sourceTree = "<group>"; };
 		B3E9D5D321A543C100B958AA /* HostingTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostingTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9D5D621A543C100B958AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E9D5D721A543C100B958AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -604,6 +616,18 @@
 		B3E9D5F921A543C300B958AA /* HostingTeacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostingTeacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9D5FD21A543C300B958AA /* HostingTeacherUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HostingTeacherUITests.m; sourceTree = "<group>"; };
 		B3E9D5FF21A543C300B958AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E9FACB21ABD97A0076FF90 /* ClassManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassManagementViewController.h; sourceTree = "<group>"; };
+		B3E9FACC21ABD97A0076FF90 /* ClassManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassManagementViewController.m; sourceTree = "<group>"; };
+		B3E9FACE21ABDD8E0076FF90 /* AddClassTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddClassTableViewController.h; sourceTree = "<group>"; };
+		B3E9FACF21ABDD8E0076FF90 /* AddClassTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddClassTableViewController.m; sourceTree = "<group>"; };
+		B3E9FAD121ABE1F90076FF90 /* SelectTeachrsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectTeachrsViewController.h; sourceTree = "<group>"; };
+		B3E9FAD221ABE1F90076FF90 /* SelectTeachrsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectTeachrsViewController.m; sourceTree = "<group>"; };
+		B3E9FAD521ABFEB20076FF90 /* StudentsManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentsManagementViewController.h; sourceTree = "<group>"; };
+		B3E9FAD621ABFEB20076FF90 /* StudentsManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentsManagementViewController.m; sourceTree = "<group>"; };
+		B3EC1FE121A7983D007D176E /* AddTeachersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTeachersTableViewController.h; sourceTree = "<group>"; };
+		B3EC1FE221A7983D007D176E /* AddTeachersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTeachersTableViewController.m; sourceTree = "<group>"; };
+		B3EC1FE421A79CC9007D176E /* DatesAndRollersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatesAndRollersViewController.h; sourceTree = "<group>"; };
+		B3EC1FE521A79CC9007D176E /* DatesAndRollersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatesAndRollersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1411,10 +1435,10 @@
 		B350A99821A5588800696511 /* ChatPhotoBrowserController */ = {
 			isa = PBXGroup;
 			children = (
-				B350A99921A5588800696511 /* ChatPhoneCollectionViewCell.h */,
 				B350A99A21A5588800696511 /* ChatPhotoBrowserView.h */,
-				B350A99B21A5588800696511 /* ChatPhoneCollectionViewCell.m */,
 				B350A99C21A5588800696511 /* ChatPhotoBrowserView.m */,
+				B350A99921A5588800696511 /* ChatPhoneCollectionViewCell.h */,
+				B350A99B21A5588800696511 /* ChatPhoneCollectionViewCell.m */,
 				B3C9C2BE21A6B3EB00FEF552 /* JHScrollView.h */,
 				B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */,
 			);
@@ -1438,6 +1462,7 @@
 			children = (
 				B3C9C2BD21A6AE3C00FEF552 /* RootVc */,
 				B369C04F21A54723003F545D /* TabBarVc */,
+				B3C9C2C121A6C0CB00FEF552 /* FistTabVc */,
 				B369C05E21A54723003F545D /* LoginVc */,
 				B369C06821A54723003F545D /* PublicVc */,
 			);
@@ -1457,6 +1482,7 @@
 				B350A9A821A55F4300696511 /* ContactViewController.m */,
 				B350A9A521A55F4300696511 /* MyViewController.h */,
 				B350A9A621A55F4300696511 /* MyViewController.m */,
+				B369C08C21A54745003F545D /* TabBarView */,
 			);
 			path = TabBarVc;
 			sourceTree = "<group>";
@@ -1477,25 +1503,12 @@
 		B369C06821A54723003F545D /* PublicVc */ = {
 			isa = PBXGroup;
 			children = (
-				B369C06921A54723003F545D /* PublicFistTableViewController.m */,
 				B369C06A21A54723003F545D /* PublicFistTableViewController.h */,
+				B369C06921A54723003F545D /* PublicFistTableViewController.m */,
+				B3EC1FE421A79CC9007D176E /* DatesAndRollersViewController.h */,
+				B3EC1FE521A79CC9007D176E /* DatesAndRollersViewController.m */,
 			);
 			path = PublicVc;
-			sourceTree = "<group>";
-		};
-		B369C07721A5472B003F545D /* vcModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = vcModel;
-			sourceTree = "<group>";
-		};
-		B369C08B21A54745003F545D /* vcView */ = {
-			isa = PBXGroup;
-			children = (
-				B369C08C21A54745003F545D /* TabBarView */,
-			);
-			path = vcView;
 			sourceTree = "<group>";
 		};
 		B369C08C21A54745003F545D /* TabBarView */ = {
@@ -1612,6 +1625,37 @@
 			path = RootVc;
 			sourceTree = "<group>";
 		};
+		B3C9C2C121A6C0CB00FEF552 /* FistTabVc */ = {
+			isa = PBXGroup;
+			children = (
+				B3E9FAD421ABFE580076FF90 /* StudentsManagement */,
+				B3E9FAC921ABD93E0076FF90 /* ClassManagement */,
+				B3C9C2C521A6C14B00FEF552 /* TeachersManagement */,
+			);
+			path = FistTabVc;
+			sourceTree = "<group>";
+		};
+		B3C9C2C521A6C14B00FEF552 /* TeachersManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9C2C221A6C13100FEF552 /* TeachersManagementViewController.h */,
+				B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */,
+				B3EC1FE121A7983D007D176E /* AddTeachersTableViewController.h */,
+				B3EC1FE221A7983D007D176E /* AddTeachersTableViewController.m */,
+				B3C9C2C621A6C2EC00FEF552 /* TeachersViews */,
+			);
+			path = TeachersManagement;
+			sourceTree = "<group>";
+		};
+		B3C9C2C621A6C2EC00FEF552 /* TeachersViews */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9C2C721A6C32600FEF552 /* TeachersManagementTableViewCell.h */,
+				B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */,
+			);
+			path = TeachersViews;
+			sourceTree = "<group>";
+		};
 		B3E9D5CA21A543C100B958AA = {
 			isa = PBXGroup;
 			children = (
@@ -1641,8 +1685,6 @@
 				B3E9D5DC21A543C100B958AA /* Main.storyboard */,
 				B369C03921A546EE003F545D /* CustomView */,
 				B369C04E21A54723003F545D /* vcClass */,
-				B369C08B21A54745003F545D /* vcView */,
-				B369C07721A5472B003F545D /* vcModel */,
 				B369C2A421A54D85003F545D /* libs */,
 				B350A96121A5585200696511 /* PackagingManagement */,
 				B369C09321A5474F003F545D /* Tools */,
@@ -1676,6 +1718,36 @@
 				B3E9D5FF21A543C300B958AA /* Info.plist */,
 			);
 			path = HostingTeacherUITests;
+			sourceTree = "<group>";
+		};
+		B3E9FAC921ABD93E0076FF90 /* ClassManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B3E9FACB21ABD97A0076FF90 /* ClassManagementViewController.h */,
+				B3E9FACC21ABD97A0076FF90 /* ClassManagementViewController.m */,
+				B3E9FACE21ABDD8E0076FF90 /* AddClassTableViewController.h */,
+				B3E9FACF21ABDD8E0076FF90 /* AddClassTableViewController.m */,
+				B3E9FAD121ABE1F90076FF90 /* SelectTeachrsViewController.h */,
+				B3E9FAD221ABE1F90076FF90 /* SelectTeachrsViewController.m */,
+				B3E9FACA21ABD9580076FF90 /* ClassViews */,
+			);
+			path = ClassManagement;
+			sourceTree = "<group>";
+		};
+		B3E9FACA21ABD9580076FF90 /* ClassViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClassViews;
+			sourceTree = "<group>";
+		};
+		B3E9FAD421ABFE580076FF90 /* StudentsManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B3E9FAD521ABFEB20076FF90 /* StudentsManagementViewController.h */,
+				B3E9FAD621ABFEB20076FF90 /* StudentsManagementViewController.m */,
+			);
+			path = StudentsManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1826,6 +1898,7 @@
 				B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */,
 				B350A94A21A554ED00696511 /* EaseBaseMessageCell.m in Sources */,
 				B369C06C21A54723003F545D /* RootViewController.m in Sources */,
+				B3EC1FE621A79CC9007D176E /* DatesAndRollersViewController.m in Sources */,
 				B350A92921A554ED00696511 /* PSTGridLayoutRow.m in Sources */,
 				B350A94321A554ED00696511 /* EaseMessageViewController.m in Sources */,
 				B350A90521A554ED00696511 /* MJRefreshHeader.m in Sources */,
@@ -1833,6 +1906,7 @@
 				B3E9D5E921A543C300B958AA /* main.m in Sources */,
 				B350A97321A5585200696511 /* CoreDataManagement.m in Sources */,
 				B350A8E921A554ED00696511 /* UIViewController+DismissKeyboard.m in Sources */,
+				B3E9FACD21ABD97A0076FF90 /* ClassManagementViewController.m in Sources */,
 				B350A95D21A554ED00696511 /* EaseUI.m in Sources */,
 				B350A90D21A554ED00696511 /* EMVoiceConverter.mm in Sources */,
 				B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */,
@@ -1851,7 +1925,9 @@
 				B369C48B21A54D86003F545D /* UIProgressView+AFNetworking.m in Sources */,
 				B350A8F021A554ED00696511 /* EaseEmotionEscape.m in Sources */,
 				B350A8EA21A554ED00696511 /* NSDateFormatter+Category.m in Sources */,
+				B3E9FAD721ABFEB20076FF90 /* StudentsManagementViewController.m in Sources */,
 				B350A8E821A554ED00696511 /* NSString+Valid.m in Sources */,
+				B3C9C2C921A6C32600FEF552 /* TeachersManagementTableViewCell.m in Sources */,
 				B369C07221A54723003F545D /* LoginViewController.m in Sources */,
 				B350A94921A554ED00696511 /* EaseMessageCell.m in Sources */,
 				B350A93B21A554ED00696511 /* UIButton+WebCache.m in Sources */,
@@ -1878,6 +1954,7 @@
 				B350A92121A554ED00696511 /* PSTCollectionViewCell.m in Sources */,
 				B350A8FD21A554ED00696511 /* MJRefreshBackNormalFooter.m in Sources */,
 				B350A90021A554ED00696511 /* MJRefreshAutoNormalFooter.m in Sources */,
+				B3E9FAD321ABE1F90076FF90 /* SelectTeachrsViewController.m in Sources */,
 				B350A90321A554ED00696511 /* MJRefreshGifHeader.m in Sources */,
 				B350A94121A554ED00696511 /* EaseUsersListViewController.m in Sources */,
 				B350A8EE21A554ED00696511 /* EaseChineseToPinyin.m in Sources */,
@@ -1886,6 +1963,7 @@
 				B369C07621A54723003F545D /* PublicFistTableViewController.m in Sources */,
 				B369C49021A54D86003F545D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B350A95721A554ED00696511 /* EaseBubbleView+Video.m in Sources */,
+				B3C9C2C421A6C13100FEF552 /* TeachersManagementViewController.m in Sources */,
 				B350A91921A554ED00696511 /* MWTapDetectingImageView.m in Sources */,
 				B350A9AC21A55F4400696511 /* ContactViewController.m in Sources */,
 				B350A97121A5585200696511 /* TJLoading.m in Sources */,
@@ -1948,6 +2026,7 @@
 				B350A93A21A554ED00696511 /* UIView+WebCacheOperation.m in Sources */,
 				B350A8F221A554ED00696511 /* EaseEmotionManager.m in Sources */,
 				B350A8FB21A554ED00696511 /* MJRefreshBackGifFooter.m in Sources */,
+				B3E9FAD021ABDD8E0076FF90 /* AddClassTableViewController.m in Sources */,
 				B369C07321A54723003F545D /* MainLogInViewController.m in Sources */,
 				B350A8F421A554ED00696511 /* EaseConversationModel.m in Sources */,
 				B350A8FE21A554ED00696511 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1968,6 +2047,7 @@
 				B350A91321A554ED00696511 /* EMAudioPlayerUtil.m in Sources */,
 				B369C48621A54D86003F545D /* AFHTTPSessionManager.m in Sources */,
 				B350A9AB21A55F4400696511 /* MyViewController.m in Sources */,
+				B3EC1FE321A7983D007D176E /* AddTeachersTableViewController.m in Sources */,
 				B350A93D21A554ED00696511 /* MBProgressHUD.m in Sources */,
 				B350A97021A5585200696511 /* LoadDataSuggest.m in Sources */,
 				B350A95021A554ED00696511 /* EaseChatToolbar.m in Sources */,

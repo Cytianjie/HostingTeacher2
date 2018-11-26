@@ -15,6 +15,12 @@
 #define URL_Registration @"/api/MobileApi/Registration"
 //登陆
 #define URL_MobileLogon @"/api/MobileApi/MobileLogon"
+//教师职称
+#define URL_Rolelist @"/api/MobileApi/Rolelist"
+//教师add
+#define URL_GartenStaffAdd @"/api/MobileApi/GartenStaffAdd"
+//教师list
+#define URL_GartenStaffList @"/api/MobileApi/GartenStaffList"
 
 
 #endif /* NetUrl_h */

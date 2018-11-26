@@ -18,6 +18,9 @@
  */
 +(UIImage *)getPlaceholderImage;
 
+//返回默认头像图片
++(UIImage *)getHeaderPlaceholderImage;
+
 /**
  <#Description#>
 
@@ -27,4 +30,6 @@
  @return 返回一段文字的size
  */
 +(CGSize)getTextSize:(NSString *)string withFont:(UIFont *)font withWidth:(CGFloat)width;
+//date转为日期格式
++(NSString *)dateChangeToStringformat:(NSDate *)date withFormatter:(NSString *)formatter;
 @end

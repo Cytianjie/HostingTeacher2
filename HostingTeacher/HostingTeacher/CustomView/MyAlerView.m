@@ -7,15 +7,12 @@
 //
 
 #import "MyAlerView.h"
-#import "AppDelegate.h"
 
 @implementation MyAlerView
 
 +(void)alterMessage:(NSString *)message{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"关 闭" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-    }];
-    [alert addAction:action];
-    [[AppDelegate getAppDelegate].window.rootViewController presentViewController:alert animated:YES completion:nil];
+
+    UIAlertView * alter = [[UIAlertView alloc]initWithTitle:@"提 示" message:message delegate:nil cancelButtonTitle:@"关 闭" otherButtonTitles:nil,nil];
+    [alter show];
 }
 @end

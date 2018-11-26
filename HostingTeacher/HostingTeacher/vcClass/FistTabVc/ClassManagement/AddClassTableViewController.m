@@ -1,18 +1,19 @@
 //
-//  RootTableViewController.m
+//  AddClassTableViewController.m
 //  HostingTeacher
 //
-//  Created by 清 on 2018/11/22.
+//  Created by 清 on 2018/11/26.
 //  Copyright © 2018 清. All rights reserved.
 //
 
-#import "RootTableViewController.h"
+#import "AddClassTableViewController.h"
+#import "SelectTeachrsViewController.h"
 
-@interface RootTableViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
-
+@interface AddClassTableViewController ()<SelectTeachrsDelegate>
+@property(nonatomic,strong)NSMutableDictionary * paramsDic;
 @end
 
-@implementation RootTableViewController
+@implementation AddClassTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,43 +23,51 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.paramsDic = [[NSMutableDictionary alloc]init];
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 4;
 }
--(void)imagePickerController:(UIImagePickerControllerSourceType)sourceType{
-    if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
-        
-        UIImagePickerController *pick=[[UIImagePickerController alloc]init];
-        pick.sourceType=sourceType;
-        pick.delegate=self;
-        pick.allowsEditing=YES;
-        [self presentViewController:pick animated:YES completion:nil];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3) {
+        SelectTeachrsViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectTeachrsViewController"];
+        vc.delegate = self;
+        vc.row = indexPath.row;
+        vc.type = indexPath.row;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
+-(void)selectTeachrDic:(NSDictionary *)dicModel row:(NSInteger)row type:(NSInteger)type{
+    
+    if (row == 1) {
+        self.zhujiaoLabel.text = dicModel[@"RealName"];
+    }else if (row == 2) {
+        self.fujiao1Label.text = dicModel[@"RealName"];
+    }else if (row == 3) {
+        self.fujiao2Label.text = dicModel[@"RealName"];
     }
 }
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+- (IBAction)saveAction:(id)sender {
     
-    //判断选中资源的类型
-    NSString *mediaType=[info objectForKey:UIImagePickerControllerMediaType];
-    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
-        //通过字典获取选中的图片
-        UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
-        [self getPicturesSuccessful:image];
+    [self.view endEditing:YES];
+    if (self.classNameLabel.text.length < 1) {
+        [MyAlerView alterMessage:@"班级名称不能为空"];
+        return;
     }
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
--(void)getPicturesSuccessful:(UIImage *)image{
+    if (self.zhujiaoLabel.text.length < 1) {
+        [MyAlerView alterMessage:@"主教老师不能为空"];
+        return;
+    }
     
-    //子类重写
 }
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -113,5 +122,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)delButtonAction:(id)sender {
+}
 
 @end

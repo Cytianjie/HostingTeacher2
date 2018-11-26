@@ -83,8 +83,6 @@
         MainTabBarViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarViewController"];
         [self presentViewController:vc animated:NO completion:nil];
         
-       
-        
     } failureBlock:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
         
     }];

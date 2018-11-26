@@ -72,7 +72,6 @@
     [params setValue:self.schoolNameTextField.text forKey:@"GartenName"];
     [params setValue:self.schoolManagenameTextField.text forKey:@"RealName"];
     [params setValue:self.schoolAdressTextField.text forKey:@"Address"];
-    [params setValue:@"ios_zarten" forKey:@"ComeFrom"];
     
     [[NetworkRequestManager manager] POST_URL_HttpHeader:HTTPHEADER_URL url:URL_Registration params:params withLoading:YES isFailureAlter:YES successBlock:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
         [LoadDataSuggest showFailWith:dataSource[@"message"]];

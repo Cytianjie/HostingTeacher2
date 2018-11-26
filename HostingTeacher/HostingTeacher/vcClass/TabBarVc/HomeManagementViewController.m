@@ -10,6 +10,10 @@
 #import "HomeManagerCollectionViewCell.h"
 #import "HomeManagerCollectionReusableView.h"
 #import "JHScrollView.h"
+#import "TeachersManagementViewController.h"
+#import "ClassManagementViewController.h"
+#import "StudentsManagementViewController.h"
+
 
 @interface HomeManagementViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,lunBoScrollViewDelegate>
 @property(nonatomic,strong)NSArray * headerTitleArray;
@@ -25,8 +29,8 @@
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"sccell"];
     self.headerTitleArray = @[@"",@"常用应用",@"教学管理"];
     NSArray * array1 = @[@""];
-    NSArray * array2 = @[@{@"image":@"daoxiaolixiao",@"title":@"到校离校"},@{@"image":@"meirishipu",@"title":@"每日食谱"},@{@"image":@"xiaoqugonggao",@"title":@"校区公告"},@{@"image":@"shouzhang",@"title":@"手账"}];
-    NSArray * array3 = @[@{@"image":@"laoshiguanli",@"title":@"老师管理"},@{@"image":@"xueshengguanli",@"title":@"学生管理"},@{@"image":@"banjiguanli",@"title":@"班级管理"},@{@"image":@"meiridianping",@"title":@"每日点评"}];
+    NSArray * array2 = @[@{@"image":@"ydaoxiaolixiao",@"title":@"到校离校"},@{@"image":@"ymeirishipu",@"title":@"每日食谱"},@{@"image":@"yxiaoqugonggao",@"title":@"校区公告"},@{@"image":@"yshouzhang",@"title":@"手账"}];
+    NSArray * array3 = @[@{@"image":@"ylaoshiguanli",@"title":@"老师管理"},@{@"image":@"yxueshengguanli",@"title":@"学生管理"},@{@"image":@"ybanjiguanli",@"title":@"班级管理"},@{@"image":@"ymeiridianping",@"title":@"每日点评"}];
     self.itemArray = @[array1,array2,array3];
     self.jhScrollView = [[JHScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width, 180)];
     self.jhScrollView.tag = 100;
@@ -100,7 +104,30 @@
     return nil;
 }
  
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        
+    }else if (indexPath.section == 1) {
+        
+    }else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            //教师管理
+            TeachersManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersManagementViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1) {
+            [[NetworkRequestManager manager] POST_URL_HttpHeader:@"" url:@"http://192.168.0.105:54961/api/MobileApi/Rolelist" params:[NSMutableDictionary dictionary] withLoading:YES isFailureAlter:YES successBlock:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
+               
+            } failureBlock:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
+                
+            }];
+            
+        } else if (indexPath.row == 2) {
+            //班级管理
+            ClassManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ClassManagementViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
+}
 
 /*
 #pragma mark - Navigation

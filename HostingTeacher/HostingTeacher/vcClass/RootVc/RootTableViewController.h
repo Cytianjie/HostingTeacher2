@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RootTableViewController : UITableViewController
-
+-(void)imagePickerController:(UIImagePickerControllerSourceType)sourceType;
 @end
 
 NS_ASSUME_NONNULL_END

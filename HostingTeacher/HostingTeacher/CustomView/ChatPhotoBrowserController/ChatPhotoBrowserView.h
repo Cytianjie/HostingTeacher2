@@ -33,7 +33,7 @@
 @property(nonatomic,assign)NSInteger index;//回调用表示第几页
 @property(nonatomic,assign)NSInteger indexPage;//进来显示第几页
 @property(nonatomic,strong)NSMutableArray * imageDataArray;
-@property(nonatomic,assign)id<PhotoBrowserViewDelegate> pBdelegate;
+@property(nonatomic,weak)id<PhotoBrowserViewDelegate> pBdelegate;
 
 -(void)createLayout;
 @end
