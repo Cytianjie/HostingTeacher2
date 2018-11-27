@@ -7,7 +7,6 @@
 //
 
 #import "TeachersManagementViewController.h"
-#import "TeachersManagementTableViewCell.h"
 #import "AddTeachersTableViewController.h"
 #import "PublicFistTableViewController.h"
 
@@ -76,7 +75,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     AddTeachersTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTeachersTableViewController"];
-    vc.teacherDataDic = self.dataArray[indexPath.row];
+    vc.incomingDataDic = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

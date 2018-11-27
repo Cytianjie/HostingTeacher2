@@ -1,20 +1,21 @@
 //
-//  AddTeachersTableViewController.m
+//  AddStudentsViewController.m
 //  HostingTeacher
 //
-//  Created by 清 on 2018/11/23.
+//  Created by 清 on 2018/11/27.
 //  Copyright © 2018 清. All rights reserved.
 //
 
-#import "AddTeachersTableViewController.h"
+#import "AddStudentsViewController.h"
 #import "DatesAndRollersViewController.h"
 
-@interface AddTeachersTableViewController ()
+
+@interface AddStudentsViewController ()
 @property(nonatomic,strong)NSMutableDictionary * paramsDic;
 @property(nonatomic,strong)NSMutableArray * headerImageArray;
 @end
 
-@implementation AddTeachersTableViewController
+@implementation AddStudentsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,24 +34,10 @@
     
     if (self.incomingDataDic != nil) {
         self.deleButton.hidden = NO;
-        self.title = @"教师详情";
-        [self.headerImageButton sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.incomingDataDic[@"Avatar"]]]  forState:UIControlStateNormal placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
-        self.nameField.text = self.incomingDataDic[@"RealName"];
-        self.phoneField.text = self.incomingDataDic[@"Mobile"];
-        self.sexLabel.text = self.incomingDataDic[@"Sex"];
-        self.positionLabel.text = [self.incomingDataDic[@"RoleID"] description];
-        self.nickNameField.text = self.incomingDataDic[@"NickName"];
-        self.emailField.text = self.incomingDataDic[@"Email"];
-        self.recordLabel.text = @"少";
-        self.bornTimeLabel.text = @"少";
-        self.inductionTimeLabel.text = @"少";
+        self.title = @"学生详情";
+       
     }else{
         self.deleButton.hidden = YES;
-        [self.paramsDic setValue:@"" forKey:@"Education"];
-        [self.paramsDic setValue:@"" forKey:@"BirthDate"];
-        [self.paramsDic setValue:@"" forKey:@"EntryDate"];
-        //[self.paramsDic setValue:[MyLogInUserManager manager].userData.htRoleID forKey:@"RoleID"];
-        //[self.paramsDic setValue:[MyLogInUserManager manager].userData.htGartenId forKey:@"GartenId"];
         [self.headerImageButton setBackgroundImage:[TJToolsClass getHeaderPlaceholderImage] forState:UIControlStateNormal];
     }
 }
@@ -62,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 12;
+    return 16;
 }
 
 /*
@@ -77,47 +64,41 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.view endEditing:YES];
     
-    if (indexPath.row == 3) {
+    if (indexPath.row == 4) {
+        NSArray * conArray = @[@"幼小",@"一年级",@"二年级",@"三年级",@"四年级",@"五年级",@"六年级",@"七年级",@"八年级",@"九年级",@"其他"];
+        [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
+            self.outGradeLabel.text = conArray[string.intValue];
+            //[self.paramsDic setValue:self.sexLabel.text forKey:@"xingbie"];
+        }];
+    }else if (indexPath.row == 6) {
+        
+        [DatesAndRollersViewController initWithStyle:1 withArray:@[] withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
+            self.serviceTimeLabel.text = string;
+            //[self.paramsDic setValue:string forKey:@"EntryDate"];
+        }];
+        
+    }else if (indexPath.row == 9) {
+        NSArray * conArray = @[@"初中",@"高中",@"专科",@"本科",@"研究生",@"其他"];
+        [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
+            self.inGradeLabel.text = conArray[string.intValue];
+            //[self.paramsDic setValue:self.sexLabel.text forKey:@"Education"];
+        }];
+        
+    }else if (indexPath.row == 10) {
+        [DatesAndRollersViewController initWithStyle:1 withArray:@[] withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
+            self.bornTimeLabel.text = string;
+            //[self.paramsDic setValue:string forKey:@"BirthDate"];
+        }];
+    }else if (indexPath.row == 11) {
         NSArray * conArray = @[@"男",@"女"];
         [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
             self.sexLabel.text = conArray[string.intValue];
-            [self.paramsDic setValue:self.sexLabel.text forKey:@"Sex"];
+            //[self.paramsDic setValue:self.sexLabel.text forKey:@"xingbie"];
         }];
-    }else if (indexPath.row == 4) {
-        
-        [[NetworkRequestManager manager] POST_URL_HttpHeader:HTTPHEADER_URL url:URL_Rolelist params:[NSMutableDictionary dictionary] withLoading:YES isFailureAlter:YES successBlock:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
-            NSArray * dataSourceArray = dataSource[@"data"];
-            if ([dataSourceArray isKindOfClass:[NSArray class]]) {
-                NSMutableArray * conArray = [[NSMutableArray alloc]init];
-                for (NSDictionary * dic in dataSourceArray) {
-                    [conArray addObject:[dic[@"Name"] description]];
-                }
-                    [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
-                        self.positionLabel.text = conArray[string.intValue];
-                        NSDictionary * postDic = dataSourceArray[string.intValue];
-                         [self.paramsDic setValue:[postDic[@"ID"] description] forKey:@"RoleID"];
-                    }];
-            }
-            
-        } failureBlock:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
-            
-        }];
-        
-    }else if (indexPath.row == 8) {
-        NSArray * conArray = @[@"初中",@"高中",@"专科",@"本科",@"研究生",@"其他"];
-        [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
-            self.recordLabel.text = conArray[string.intValue];
-        }];
-        [self.paramsDic setValue:self.sexLabel.text forKey:@"Education"];
-    }else if (indexPath.row == 9) {
+    }else if (indexPath.row == 12) {
         [DatesAndRollersViewController initWithStyle:1 withArray:@[] withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
-            self.bornTimeLabel.text = string;
-            [self.paramsDic setValue:string forKey:@"BirthDate"];
-        }];
-    }else if (indexPath.row == 10) {
-        [DatesAndRollersViewController initWithStyle:1 withArray:@[] withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
-            self.inductionTimeLabel.text = string;
-            [self.paramsDic setValue:string forKey:@"EntryDate"];
+            self.admissionDateLabel.text = string;
+            //[self.paramsDic setValue:string forKey:@"EntryDate"];
         }];
     }
     
@@ -166,7 +147,6 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 -(void)headerImageButtonClick{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"提示" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"关 闭" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -190,49 +170,4 @@
     [self.headerImageArray removeAllObjects];
     [self.headerImageArray addObject:image];
 }
-
-- (IBAction)saveAction:(id)sender {
-
-    [self.view endEditing:YES];
-    
-//    if (self.nameField.text.length < 1) {
-//        [MyAlerView alterMessage:@"姓名不能为空"];
-//        return;
-//    }
-//    if (self.phoneField.text.length < 1) {
-//        [MyAlerView alterMessage:@"手机号不能为空"];
-//        return;
-//    }
-//    if (self.sexLabel.text.length < 1) {
-//        [MyAlerView alterMessage:@"性别不能为空"];
-//        return;
-//    }
-//    if (self.positionLabel.text.length < 1) {
-//        [MyAlerView alterMessage:@"职务不能为空"];
-//        return;
-//    }
-    [self.paramsDic setValue:self.nameField.text forKey:@"RealName"];
-    [self.paramsDic setValue:self.phoneField.text forKey:@"Mobile"];
-    
-    //其他
-    [self.paramsDic setValue:self.nickNameField.text forKey:@"NickName"];
-    [self.paramsDic setValue:self.emailField.text forKey:@"Email"];
-
-//    [[NetworkRequestManager manager] POST_IMAGEURL_HttpHeader:HTTPHEADER_URL url:URL_GartenStaffAdd params:self.paramsDic imageArry:self.headerImageArray withLoading:YES isFailureAlter:YES success:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
-//        [LoadDataSuggest showFailWith:dataSource[@"message"]];
-//        [self.navigationController popViewControllerAnimated:YES];
-//    } failure:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
-//
-//    }];
-    
-    
-    [[NetworkRequestManager manager] POST_IMAGEURL_HttpHeader:HTTPHEADER_URL url:@"/api/MobileApi/Test" params:self.paramsDic imageArry:self.headerImageArray withLoading:YES isFailureAlter:YES success:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
-   
-    } failure:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
-        
-    }];
-
-    
-}
-
 @end

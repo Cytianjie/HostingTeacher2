@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *inductionTimeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleButton;
 
-@property(nonatomic,strong)NSDictionary * teacherDataDic;
+@property(nonatomic,strong)NSDictionary * incomingDataDic;
 
 @end
 

@@ -115,12 +115,9 @@
             TeachersManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TeachersManagementViewController"];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 1) {
-            [[NetworkRequestManager manager] POST_URL_HttpHeader:@"" url:@"http://192.168.0.105:54961/api/MobileApi/Rolelist" params:[NSMutableDictionary dictionary] withLoading:YES isFailureAlter:YES successBlock:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
-               
-            } failureBlock:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {
-                
-            }];
-            
+            //学生管理
+            StudentsManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentsManagementViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 2) {
             //班级管理
             ClassManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ClassManagementViewController"];

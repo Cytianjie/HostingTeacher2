@@ -7,7 +7,6 @@
 //
 
 #import "SelectTeachrsViewController.h"
-#import "TeachersManagementTableViewCell.h"
 #import "PublicFistTableViewController.h"
 
 @interface SelectTeachrsViewController ()

@@ -7,7 +7,6 @@
 //
 
 #import "ClassManagementViewController.h"
-#import "TeachersManagementTableViewCell.h"
 #import "PublicFistTableViewController.h"
 
 @interface ClassManagementViewController ()

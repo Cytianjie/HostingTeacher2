@@ -144,8 +144,6 @@
              //4. mimeType：上传的文件的类型
          
             [formData appendPartWithFileData:imageData name:@"File" fileName:fileName mimeType:@"image/jpeg"]; //
-        
-         
         }
         
      

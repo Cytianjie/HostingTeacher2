@@ -179,6 +179,7 @@
 		B369C49121A54D86003F545D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3EE21A54D85003F545D /* UIWebView+AFNetworking.m */; };
 		B369C49221A54D86003F545D /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3EF21A54D85003F545D /* AFAutoPurgingImageCache.m */; };
 		B369C49321A54D86003F545D /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3F121A54D85003F545D /* AFImageDownloader.m */; };
+		B385D63821AD4C9600E88417 /* AddStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B385D63721AD4C9600E88417 /* AddStudentsViewController.m */; };
 		B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */; };
 		B3C9C2B021A64EBB00FEF552 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AF21A64EBB00FEF552 /* RegisteredViewController.m */; };
 		B3C9C2B321A65C9400FEF552 /* MyLogInUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2B221A65C9400FEF552 /* MyLogInUserManager.m */; };
@@ -187,6 +188,7 @@
 		B3C9C2C021A6B3EC00FEF552 /* JHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2BF21A6B3EB00FEF552 /* JHScrollView.m */; };
 		B3C9C2C421A6C13100FEF552 /* TeachersManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */; };
 		B3C9C2C921A6C32600FEF552 /* TeachersManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */; };
+		B3DB6EE321ACF0E0000B602B /* StudentsManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DB6EE221ACF0E0000B602B /* StudentsManagementTableViewCell.m */; };
 		B3E9D5D821A543C100B958AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5D721A543C100B958AA /* AppDelegate.m */; };
 		B3E9D5DE21A543C100B958AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E9D5DC21A543C100B958AA /* Main.storyboard */; };
 		B3E9D5E121A543C100B958AA /* HostingTeacher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E9D5DF21A543C100B958AA /* HostingTeacher.xcdatamodeld */; };
@@ -585,6 +587,8 @@
 		B36D55D821A544CF00477ABC /* CoreDataClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataClasses.h; sourceTree = "<group>"; };
 		B36D55D921A544CF00477ABC /* DataConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataConfiguration.h; sourceTree = "<group>"; };
 		B36D55DA21A544CF00477ABC /* NetUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUrl.h; sourceTree = "<group>"; };
+		B385D63621AD4C9600E88417 /* AddStudentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddStudentsViewController.h; sourceTree = "<group>"; };
+		B385D63721AD4C9600E88417 /* AddStudentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddStudentsViewController.m; sourceTree = "<group>"; };
 		B3C9C2AB21A64E4500FEF552 /* RootTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		B3C9C2AE21A64EBB00FEF552 /* RegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
@@ -601,6 +605,8 @@
 		B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeachersManagementViewController.m; sourceTree = "<group>"; };
 		B3C9C2C721A6C32600FEF552 /* TeachersManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeachersManagementTableViewCell.h; sourceTree = "<group>"; };
 		B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeachersManagementTableViewCell.m; sourceTree = "<group>"; };
+		B3DB6EE121ACF0E0000B602B /* StudentsManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentsManagementTableViewCell.h; sourceTree = "<group>"; };
+		B3DB6EE221ACF0E0000B602B /* StudentsManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentsManagementTableViewCell.m; sourceTree = "<group>"; };
 		B3E9D5D321A543C100B958AA /* HostingTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostingTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E9D5D621A543C100B958AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3E9D5D721A543C100B958AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1656,6 +1662,15 @@
 			path = TeachersViews;
 			sourceTree = "<group>";
 		};
+		B3DB6EE021ACF0BD000B602B /* StudentsViews */ = {
+			isa = PBXGroup;
+			children = (
+				B3DB6EE121ACF0E0000B602B /* StudentsManagementTableViewCell.h */,
+				B3DB6EE221ACF0E0000B602B /* StudentsManagementTableViewCell.m */,
+			);
+			path = StudentsViews;
+			sourceTree = "<group>";
+		};
 		B3E9D5CA21A543C100B958AA = {
 			isa = PBXGroup;
 			children = (
@@ -1746,6 +1761,9 @@
 			children = (
 				B3E9FAD521ABFEB20076FF90 /* StudentsManagementViewController.h */,
 				B3E9FAD621ABFEB20076FF90 /* StudentsManagementViewController.m */,
+				B385D63621AD4C9600E88417 /* AddStudentsViewController.h */,
+				B385D63721AD4C9600E88417 /* AddStudentsViewController.m */,
+				B3DB6EE021ACF0BD000B602B /* StudentsViews */,
 			);
 			path = StudentsManagement;
 			sourceTree = "<group>";
@@ -1896,6 +1914,7 @@
 				B350A92321A554ED00696511 /* PSTCollectionViewData.m in Sources */,
 				B350A97221A5585200696511 /* NetworkRequestManager.m in Sources */,
 				B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */,
+				B3DB6EE321ACF0E0000B602B /* StudentsManagementTableViewCell.m in Sources */,
 				B350A94A21A554ED00696511 /* EaseBaseMessageCell.m in Sources */,
 				B369C06C21A54723003F545D /* RootViewController.m in Sources */,
 				B3EC1FE621A79CC9007D176E /* DatesAndRollersViewController.m in Sources */,
@@ -1907,6 +1926,7 @@
 				B350A97321A5585200696511 /* CoreDataManagement.m in Sources */,
 				B350A8E921A554ED00696511 /* UIViewController+DismissKeyboard.m in Sources */,
 				B3E9FACD21ABD97A0076FF90 /* ClassManagementViewController.m in Sources */,
+				B385D63821AD4C9600E88417 /* AddStudentsViewController.m in Sources */,
 				B350A95D21A554ED00696511 /* EaseUI.m in Sources */,
 				B350A90D21A554ED00696511 /* EMVoiceConverter.mm in Sources */,
 				B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */,
