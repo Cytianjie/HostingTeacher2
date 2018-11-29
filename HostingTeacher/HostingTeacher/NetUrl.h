@@ -10,6 +10,8 @@
 #define NetUrl_h
 
 #define HTTPHEADER_URL @"http://140.143.138.195:8080"
+//#define HTTPHEADER_URL @"http://192.168.0.105:54961"
+
 
 //注册
 #define URL_Registration @"/api/MobileApi/Registration"
@@ -19,6 +21,10 @@
 #define URL_Rolelist @"/api/MobileApi/Rolelist"
 //教师add
 #define URL_GartenStaffAdd @"/api/MobileApi/GartenStaffAdd"
+//教师del
+#define URL_GartenStaffDel @"/api/MobileApi/GartenStaffDel"
+//教师更新
+#define URL_GartenStaffEdit @"/api/MobileApi/GartenStaffEdit"
 //教师list
 #define URL_GartenStaffList @"/api/MobileApi/GartenStaffList"
 

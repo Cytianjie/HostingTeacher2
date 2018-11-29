@@ -13,6 +13,7 @@
 #import "TeachersManagementViewController.h"
 #import "ClassManagementViewController.h"
 #import "StudentsManagementViewController.h"
+#import "AttendanceManagementViewController.h"
 
 
 @interface HomeManagementViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,lunBoScrollViewDelegate>
@@ -108,7 +109,11 @@
     if (indexPath.section == 0) {
         
     }else if (indexPath.section == 1) {
-        
+        if (indexPath.row == 0) {
+            //考勤管理
+            AttendanceManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AttendanceManagementViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             //教师管理

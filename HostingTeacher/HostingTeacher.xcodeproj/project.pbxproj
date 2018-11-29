@@ -180,6 +180,9 @@
 		B369C49221A54D86003F545D /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3EF21A54D85003F545D /* AFAutoPurgingImageCache.m */; };
 		B369C49321A54D86003F545D /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B369C3F121A54D85003F545D /* AFImageDownloader.m */; };
 		B385D63821AD4C9600E88417 /* AddStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B385D63721AD4C9600E88417 /* AddStudentsViewController.m */; };
+		B3B5230421AE80D800576B0F /* AttendanceManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B5230321AE80D800576B0F /* AttendanceManagementViewController.m */; };
+		B3B9A4D221AFB6EB00A9263B /* AttendanceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B9A4D121AFB6EB00A9263B /* AttendanceDetailsViewController.m */; };
+		B3B9A4D521AFBDA800A9263B /* SignInOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B9A4D421AFBDA800A9263B /* SignInOperationViewController.m */; };
 		B3C9C2AD21A64E4500FEF552 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */; };
 		B3C9C2B021A64EBB00FEF552 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2AF21A64EBB00FEF552 /* RegisteredViewController.m */; };
 		B3C9C2B321A65C9400FEF552 /* MyLogInUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C9C2B221A65C9400FEF552 /* MyLogInUserManager.m */; };
@@ -589,6 +592,12 @@
 		B36D55DA21A544CF00477ABC /* NetUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUrl.h; sourceTree = "<group>"; };
 		B385D63621AD4C9600E88417 /* AddStudentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddStudentsViewController.h; sourceTree = "<group>"; };
 		B385D63721AD4C9600E88417 /* AddStudentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddStudentsViewController.m; sourceTree = "<group>"; };
+		B3B5230221AE80D800576B0F /* AttendanceManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttendanceManagementViewController.h; sourceTree = "<group>"; };
+		B3B5230321AE80D800576B0F /* AttendanceManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendanceManagementViewController.m; sourceTree = "<group>"; };
+		B3B9A4D021AFB6EB00A9263B /* AttendanceDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttendanceDetailsViewController.h; sourceTree = "<group>"; };
+		B3B9A4D121AFB6EB00A9263B /* AttendanceDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendanceDetailsViewController.m; sourceTree = "<group>"; };
+		B3B9A4D321AFBDA800A9263B /* SignInOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInOperationViewController.h; sourceTree = "<group>"; };
+		B3B9A4D421AFBDA800A9263B /* SignInOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInOperationViewController.m; sourceTree = "<group>"; };
 		B3C9C2AB21A64E4500FEF552 /* RootTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		B3C9C2AC21A64E4500FEF552 /* RootTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		B3C9C2AE21A64EBB00FEF552 /* RegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
@@ -1513,6 +1522,7 @@
 				B369C06921A54723003F545D /* PublicFistTableViewController.m */,
 				B3EC1FE421A79CC9007D176E /* DatesAndRollersViewController.h */,
 				B3EC1FE521A79CC9007D176E /* DatesAndRollersViewController.m */,
+				B3B9A4CF21AF90B400A9263B /* PublicVcViews */,
 			);
 			path = PublicVc;
 			sourceTree = "<group>";
@@ -1618,6 +1628,28 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		B3B5230121AE809E00576B0F /* AttendanceManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B3B5230221AE80D800576B0F /* AttendanceManagementViewController.h */,
+				B3B5230321AE80D800576B0F /* AttendanceManagementViewController.m */,
+				B3B9A4D021AFB6EB00A9263B /* AttendanceDetailsViewController.h */,
+				B3B9A4D121AFB6EB00A9263B /* AttendanceDetailsViewController.m */,
+				B3B9A4D321AFBDA800A9263B /* SignInOperationViewController.h */,
+				B3B9A4D421AFBDA800A9263B /* SignInOperationViewController.m */,
+			);
+			path = AttendanceManagement;
+			sourceTree = "<group>";
+		};
+		B3B9A4CF21AF90B400A9263B /* PublicVcViews */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9C2C721A6C32600FEF552 /* TeachersManagementTableViewCell.h */,
+				B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */,
+			);
+			path = PublicVcViews;
+			sourceTree = "<group>";
+		};
 		B3C9C2BD21A6AE3C00FEF552 /* RootVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1634,6 +1666,7 @@
 		B3C9C2C121A6C0CB00FEF552 /* FistTabVc */ = {
 			isa = PBXGroup;
 			children = (
+				B3B5230121AE809E00576B0F /* AttendanceManagement */,
 				B3E9FAD421ABFE580076FF90 /* StudentsManagement */,
 				B3E9FAC921ABD93E0076FF90 /* ClassManagement */,
 				B3C9C2C521A6C14B00FEF552 /* TeachersManagement */,
@@ -1656,8 +1689,6 @@
 		B3C9C2C621A6C2EC00FEF552 /* TeachersViews */ = {
 			isa = PBXGroup;
 			children = (
-				B3C9C2C721A6C32600FEF552 /* TeachersManagementTableViewCell.h */,
-				B3C9C2C821A6C32600FEF552 /* TeachersManagementTableViewCell.m */,
 			);
 			path = TeachersViews;
 			sourceTree = "<group>";
@@ -1911,6 +1942,7 @@
 				B3C9C2B321A65C9400FEF552 /* MyLogInUserManager.m in Sources */,
 				B350A93721A554ED00696511 /* SDWebImageDownloaderOperation.m in Sources */,
 				B369C48E21A54D86003F545D /* UIImageView+AFNetworking.m in Sources */,
+				B3B9A4D221AFB6EB00A9263B /* AttendanceDetailsViewController.m in Sources */,
 				B350A92321A554ED00696511 /* PSTCollectionViewData.m in Sources */,
 				B350A97221A5585200696511 /* NetworkRequestManager.m in Sources */,
 				B3C9C2BC21A6A13C00FEF552 /* HomeManagerCollectionReusableView.m in Sources */,
@@ -1945,6 +1977,7 @@
 				B369C48B21A54D86003F545D /* UIProgressView+AFNetworking.m in Sources */,
 				B350A8F021A554ED00696511 /* EaseEmotionEscape.m in Sources */,
 				B350A8EA21A554ED00696511 /* NSDateFormatter+Category.m in Sources */,
+				B3B9A4D521AFBDA800A9263B /* SignInOperationViewController.m in Sources */,
 				B3E9FAD721ABFEB20076FF90 /* StudentsManagementViewController.m in Sources */,
 				B350A8E821A554ED00696511 /* NSString+Valid.m in Sources */,
 				B3C9C2C921A6C32600FEF552 /* TeachersManagementTableViewCell.m in Sources */,
@@ -2058,6 +2091,7 @@
 				B350A90F21A554ED00696511 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				B350A90221A554ED00696511 /* MJRefreshStateHeader.m in Sources */,
 				B350A92D21A554ED00696511 /* MKAnnotationView+WebCache.m in Sources */,
+				B3B5230421AE80D800576B0F /* AttendanceManagementViewController.m in Sources */,
 				B350A99721A5587E00696511 /* MyAlerView.m in Sources */,
 				B350A93021A554ED00696511 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B350A94821A554ED00696511 /* EaseCustomMessageCell.m in Sources */,

@@ -57,7 +57,7 @@
      PublicFistTableViewController * publicTableViewVc = [self.storyboard instantiateViewControllerWithIdentifier:@"PublicFistTableViewController"];
      TeachersManagementTableViewCell *cell = [publicTableViewVc.tableView dequeueReusableCellWithIdentifier:@"cell"];
      NSDictionary * dataDic = self.dataArray[indexPath.row];
-     [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dataDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
+     [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,dataDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
      cell.nameLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"RealName"]];
      cell.subLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"RoleID"]];
      [cell.phoneButton addTarget:self action:@selector(phoneButtonClcik:) forControlEvents:UIControlEventTouchUpInside];

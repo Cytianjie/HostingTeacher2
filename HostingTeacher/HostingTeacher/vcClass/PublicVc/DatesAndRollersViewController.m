@@ -25,7 +25,9 @@
     vc.dataArray = dataArray;
     vc.type = type;
     vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [fromVc presentViewController:vc animated:NO completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [fromVc presentViewController:vc animated:NO completion:nil];
+    });
     return vc;
 }
 

@@ -25,6 +25,13 @@
     NSDictionary *attributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle.copy};
     return [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;    
 }
+//根据高度度求宽度  text 计算的内容  Height 计算的高度 font字体大小
++ (CGFloat)getWidthWithText:(NSString *)text height:(CGFloat)height font:(UIFont *)font{
+    
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+    return rect.size.width;
+}
+
 // timestamp 时间戳
 + (NSTimeInterval)timestamp{
     NSDate *date = [NSDate date];
