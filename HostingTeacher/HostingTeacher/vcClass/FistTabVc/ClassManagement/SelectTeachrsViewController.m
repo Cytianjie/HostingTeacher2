@@ -49,8 +49,9 @@
     PublicFistTableViewController * publicTableViewVc = [self.storyboard instantiateViewControllerWithIdentifier:@"PublicFistTableViewController"];
     TeachersManagementTableViewCell *cell = [publicTableViewVc.tableView dequeueReusableCellWithIdentifier:@"cell"];
     NSDictionary * dataDic = self.dataArray[indexPath.row];
-    [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,dataDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
-    cell.nameLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"RealName"]];
+    NSDictionary * modelDic = dataDic[@"usermodel"];
+    [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,modelDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@",modelDic[@"RealName"]];
     cell.subLabel.text = @"";
     cell.phoneButton.hidden = YES;
     return cell;

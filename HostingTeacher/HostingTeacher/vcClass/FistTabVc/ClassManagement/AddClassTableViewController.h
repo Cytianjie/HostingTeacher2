@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *fujiao2Label;
 @property (weak, nonatomic) IBOutlet UIButton *delButton;
 
+@property(nonatomic,strong)NSDictionary * incomingDataDic;
+
 @end
 
 NS_ASSUME_NONNULL_END

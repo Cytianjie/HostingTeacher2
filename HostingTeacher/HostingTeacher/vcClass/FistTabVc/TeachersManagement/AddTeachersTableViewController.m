@@ -35,20 +35,25 @@
     if (self.incomingDataDic != nil) {
         self.deleButton.hidden = NO;
         self.title = @"教师详情";
-        [self.headerImageButton sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.incomingDataDic[@"Avatar"]]]  forState:UIControlStateNormal placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
-        self.nameField.text = self.incomingDataDic[@"RealName"];
-        self.phoneField.text = self.incomingDataDic[@"Mobile"];
-        self.sexLabel.text = self.incomingDataDic[@"Sex"];
-        self.positionLabel.text = [self.incomingDataDic[@"RoleID"] description];
-        self.nickNameField.text = self.incomingDataDic[@"NickName"];
-        self.emailField.text = self.incomingDataDic[@"Email"];
-        self.recordLabel.text = @"少";
-        self.bornTimeLabel.text = @"少";
-        self.inductionTimeLabel.text = @"少";
+        NSDictionary * modelDic = self.incomingDataDic[@"usermodel"];
+        [self.headerImageButton sd_setBackgroundImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,modelDic[@"Avatar"]]]  forState:UIControlStateNormal placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
+        self.nameField.text = modelDic[@"RealName"];
+        self.phoneField.text = modelDic[@"Mobile"];
+        self.sexLabel.text = modelDic[@"Sex"];
+        self.positionLabel.text = [self.incomingDataDic[@"rolename"] description];
+        self.nickNameField.text = modelDic[@"NickName"];
+        self.emailField.text = modelDic[@"Email"];
+        self.recordLabel.text = modelDic[@"Education"];;
+        self.bornTimeLabel.text = modelDic[@"BirthDate"];;
+        self.inductionTimeLabel.text = modelDic[@"EntryDate"];;
         
-        [self.paramsDic setValue:[self.incomingDataDic[@"Uid"] description] forKey:@"Uid"];
-        [self.paramsDic setValue:[self.incomingDataDic[@"Sex"] description] forKey:@"Sex"];
-        [self.paramsDic setValue:[self.incomingDataDic[@"RoleID"] description] forKey:@"RoleID"];
+        //选择部分
+        [self.paramsDic setValue:[modelDic[@"Uid"] description] forKey:@"Uid"];
+        [self.paramsDic setValue:[modelDic[@"Sex"] description] forKey:@"Sex"];
+        [self.paramsDic setValue:[modelDic[@"RoleID"] description] forKey:@"RoleID"];
+        [self.paramsDic setValue:[modelDic[@"Education"] description] forKey:@"Education"];
+        [self.paramsDic setValue:[modelDic[@"BirthDate"] description] forKey:@"BirthDate"];
+        [self.paramsDic setValue:[modelDic[@"EntryDate"] description] forKey:@"EntryDate"];
     }else{
         self.deleButton.hidden = YES;
         [self.paramsDic setValue:@"" forKey:@"Education"];
@@ -112,8 +117,8 @@
         NSArray * conArray = @[@"初中",@"高中",@"专科",@"本科",@"研究生",@"其他"];
         [DatesAndRollersViewController initWithStyle:2 withArray:conArray withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
             self.recordLabel.text = conArray[string.intValue];
+            [self.paramsDic setValue:self.recordLabel.text forKey:@"Education"];
         }];
-        [self.paramsDic setValue:self.sexLabel.text forKey:@"Education"];
     }else if (indexPath.row == 9) {
         [DatesAndRollersViewController initWithStyle:1 withArray:@[] withFromVc:self withDataRollersSuccess:^(NSString * _Nonnull string) {
             self.bornTimeLabel.text = string;
@@ -187,7 +192,8 @@
         if (self.headerImageArray.count > 0) {
             [self.paramsDic setValue:@"" forKey:@"Avatar"];
         }else{
-            [self.paramsDic setValue:[self.incomingDataDic[@"Avatar"] description] forKey:@"Avatar"];
+            NSDictionary * modelDic = self.incomingDataDic[@"usermodel"];
+            [self.paramsDic setValue:[modelDic[@"Avatar"] description] forKey:@"Avatar"];
         }
         
         url = URL_GartenStaffEdit;
@@ -209,8 +215,9 @@
     }];
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确 定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
-        [params setValue:[self.incomingDataDic[@"Uid"] description] forKey:@"id"];
-        [[NetworkRequestManager manager] POST_IMAGEURL_HttpHeader:HTTPHEADER_URL url:URL_GartenStaffDel params:params imageArry:self.headerImageArray withLoading:YES isFailureAlter:YES success:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
+        NSDictionary * modelDic = self.incomingDataDic[@"usermodel"];
+        [params setValue:[modelDic[@"Uid"] description] forKey:@"id"];
+        [[NetworkRequestManager manager] POST_IMAGEURL_HttpHeader:HTTPHEADER_URL url:URL_GartenStaffDel params:params imageArry:nil withLoading:YES isFailureAlter:YES success:^(NSURLSessionTask * _Nonnull task, id  _Nonnull dataSource) {
             [LoadDataSuggest showFailWith:dataSource[@"message"]];
             [self.navigationController popViewControllerAnimated:YES];
         } failure:^(NSURLSessionTask * _Nonnull task, NSString * _Nonnull errorMessage, NSError * _Nullable error) {

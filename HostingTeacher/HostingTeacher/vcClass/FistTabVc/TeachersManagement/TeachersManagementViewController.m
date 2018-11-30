@@ -57,9 +57,10 @@
      PublicFistTableViewController * publicTableViewVc = [self.storyboard instantiateViewControllerWithIdentifier:@"PublicFistTableViewController"];
      TeachersManagementTableViewCell *cell = [publicTableViewVc.tableView dequeueReusableCellWithIdentifier:@"cell"];
      NSDictionary * dataDic = self.dataArray[indexPath.row];
-     [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,dataDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
-     cell.nameLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"RealName"]];
-     cell.subLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"RoleID"]];
+     NSDictionary * modelDic = dataDic[@"usermodel"];
+     [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",HTTPHEADER_URL,modelDic[@"Avatar"]]] placeholderImage:[TJToolsClass getHeaderPlaceholderImage]];
+     cell.nameLabel.text = [NSString stringWithFormat:@"%@",modelDic[@"RealName"]];
+     cell.subLabel.text = [NSString stringWithFormat:@"%@",dataDic[@"rolename"]];
      [cell.phoneButton addTarget:self action:@selector(phoneButtonClcik:) forControlEvents:UIControlEventTouchUpInside];
      cell.phoneButton.tag = indexPath.row;
      return cell;
@@ -67,7 +68,8 @@
 
 -(void)phoneButtonClcik:(UIButton *)button{
     NSDictionary * dataDic = self.dataArray[button.tag];
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",dataDic[@"Mobile"]];
+    NSDictionary * modelDic = dataDic[@"usermodel"];
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",modelDic[@"Mobile"]];
     UIWebView * callWebview = [[UIWebView alloc] init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
     [self.view addSubview:callWebview];

@@ -1681,16 +1681,8 @@
 				B3C9C2C321A6C13100FEF552 /* TeachersManagementViewController.m */,
 				B3EC1FE121A7983D007D176E /* AddTeachersTableViewController.h */,
 				B3EC1FE221A7983D007D176E /* AddTeachersTableViewController.m */,
-				B3C9C2C621A6C2EC00FEF552 /* TeachersViews */,
 			);
 			path = TeachersManagement;
-			sourceTree = "<group>";
-		};
-		B3C9C2C621A6C2EC00FEF552 /* TeachersViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TeachersViews;
 			sourceTree = "<group>";
 		};
 		B3DB6EE021ACF0BD000B602B /* StudentsViews */ = {
