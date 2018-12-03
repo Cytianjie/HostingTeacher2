@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIImageView *sexImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *selectImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerImageViewLeftValue;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneButtonWidthValue;
 
 @end
 
