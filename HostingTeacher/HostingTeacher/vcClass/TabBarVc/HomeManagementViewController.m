@@ -14,6 +14,7 @@
 #import "ClassManagementViewController.h"
 #import "StudentsManagementViewController.h"
 #import "AttendanceManagementViewController.h"
+#import "SchoolBulletinViewController.h"
 
 
 @interface HomeManagementViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,lunBoScrollViewDelegate>
@@ -113,6 +114,16 @@
             //考勤管理
             AttendanceManagementViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AttendanceManagementViewController"];
             [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1) {
+            //每日食谱
+            
+        }else if (indexPath.row == 2) {
+            //校区公告
+            SchoolBulletinViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SchoolBulletinViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 3) {
+            //手账
+            
         }
     }else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
